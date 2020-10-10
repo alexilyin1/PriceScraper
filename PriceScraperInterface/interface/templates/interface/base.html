@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {{form.media.css}}
+    {% load static %}
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    {% include 'interface/includes/navbar.html' %}
+
+    {% block content %}
+    {% endblock %}
+
+    <div id="form-container" style="height: 85%; padding-top: 220px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <form method="post">
+                        <p class="lead">Email</p>
+                        <div class="input-group mb-3">
+                            {% csrf_token %}
+                            {{ form.email.errors }}
+                            {{ form.email }}
+                        </div>
+                        <p class="lead">Zip Code</p>
+                        <div class="input-group mb-3">
+                            {% csrf_token %}
+                            {{ form.zip_code.errors }}
+                            {{ form.zip_code }}
+                        </div>
+                        <p class="lead">Distance from Zip Code</p>
+                        <div class="input-group mb-3">
+                            {% csrf_token %}
+                            {{ form.dist.errors }}
+                            {{ form.dist }}
+                        </div>
+                        <p class="lead">Minimum Dealership Stars</p>
+                        <div class="input-group mb-3">
+                            {% csrf_token %}
+                            {{ form.minimum_stars.errors }}
+                            {{ form.minimum_stars }}
+                        </div>
+                        <p class="lead">Car Make</p>
+                        <div class="input-group mb-3">
+                            {% csrf_token %}
+                            {{ form.car_make.errors }}
+                            {{ form.car_make }}
+                        </div>
+                        <p class="lead">Car Model</p>
+                        <div class="input-group mb-3">
+                            {% csrf_token %}
+                            {{ form.car_model.errors }}
+                            {{ form.car_model }}
+                        </div>
+                        <p class="lead">Frequency - Enter your desired frequency (i.e. 1 report every 7 days)</p>
+                        <div class="input-group mb-3">
+                            {% csrf_token %}
+                            {{ form.frequency.errors }}
+                            {{ form.frequency }}
+                        </div>
+                        <p class="lead">Prices - Choose if you want to scrape full prices with discounts or only the MSRP price</p>
+                        <div class="input-group mb-3">
+                            {% csrf_token %}
+                            {{ form.prices.errors }}
+                            {{ form.prices }}
+                        </div>
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-secondary" type="submit">Submit</button>
+                            </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="{% static 'smart-selects/admin/js/chainedfk.js' %}"></script>
+    <script type="text/javascript" src="{% static 'smart-selects/admin/js/chainedm2m.js' %}"></script>
+    <script type="text/javascript" src="{% static 'smart-selects/admin/js/bindfields.js' %}"></script>
+    {{form.media.js}}
+  </body>
+</html>

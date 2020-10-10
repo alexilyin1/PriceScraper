@@ -1,0 +1,4 @@
+env/
+*settings.py
+*keys.py
+*.csv

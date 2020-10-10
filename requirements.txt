@@ -60,7 +60,6 @@ psutil==5.5.1
 psycopg2==2.8.5
 psycopg2-binary==2.8.5
 ptyprocess==0.6.0
-PyQt5==5.14.1
 QtAwesome==0.4.4
 qtconsole==4.6.0
 QtPy==1.9.0

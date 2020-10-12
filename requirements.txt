@@ -28,6 +28,7 @@ decorator==4.4.2
 defusedxml==0.6.0
 Django==3.0.6
 django-celery-results==1.2.1
+dj_database_url==0.5.0
 django-rest-framework==0.1.0
 django-restframework==0.0.1
 djangorestframework==3.11.0

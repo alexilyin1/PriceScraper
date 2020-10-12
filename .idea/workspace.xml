@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1e5a4883-3de0-44eb-9e03-a03cd3d9efc1" name="Default Changelist" comment="" />
+    <list default="true" id="1e5a4883-3de0-44eb-9e03-a03cd3d9efc1" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/PriceScraperInterface/Procfile" beforeDir="false" afterPath="$PROJECT_DIR$/PriceScraperInterface/Procfile" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

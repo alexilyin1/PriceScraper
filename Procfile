@@ -1,1 +1,1 @@
-web: gunicorn PriceScraper.PriceScraperInterface.wsgi
+web: gunicorn PriceScraper.PriceScraperInterface.wsgi --log-file -
